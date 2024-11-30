@@ -6,20 +6,14 @@
  */
 
 /**
- * Check whether one number is greater than a given number
- * @param {number} value
- * @param {number} threshold
- * @returns bool
+ * Check whether one number is greater than a given number.
+ * @param {number} value - The value to compare.
+ * @param {number} threshold - The threshold to compare against.
+ * @returns {boolean} True if value is greater than threshold, otherwise false.
  */
 const isGreaterThan = function (value, threshold) {
-    const result = value - threshold;
-    
-    if (result > 0) {
-        return true;
-    }
-
-    return false;
+    return value > threshold;
   };
   
-  export default isGreaterThan;
+export default isGreaterThan;
   

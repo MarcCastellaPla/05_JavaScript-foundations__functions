@@ -5,13 +5,12 @@
  */
 
 /**
- * Check a pair of numbers and return true if their sum is 50 or greater than 50
- * @param {array} collection
- * @returns boolean
+ * Checks if a collection (array) has elements.
+ * @param {Array} collection - The array (collection) to check.
+ * @returns {boolean} Returns true if the collection has elements, otherwise false.
  */
 const checkCollectionHasElements = function (collection) {
-    return collection.length > 0;
+  return collection.length > 0;
 }
-  
-  export default checkCollectionHasElements;
-  
+
+export default checkCollectionHasElements;

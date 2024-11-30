@@ -10,19 +10,18 @@
  * docu 👉 https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray
  */
 
-// Comprovar si el valor que li passas com a argument es del tipus que tu li demanes
-// Exemple: validate('data', number) (Si es un numero tornara True sino False)
-
 /**
- * Check a pair of numbers and return true if their sum is 50 or greater than 50
- * @param {'string' | 'number' | 'boolean' | 'array' } value
- * @param {boolean} type
- * 
- * @returns boolean
+ * Checks if the type of a value matches the specified type.
+ * @param {any} value - The value to check.
+ * @param {'string' | 'number' | 'boolean' | 'array'} type - The type to check against.
+ * @returns {boolean} True if the type matches, false otherwise.
  */
-const checkCollectionHasElements = function (collection) {
-    return collection.length > 0;
-}
-  
-  export default checkCollectionHasElements;
-  
+const isTypeOf = function (value, type) {
+  if (type === 'array') {
+    return Array.isArray(value);
+  }
+
+  return typeof value === type;
+};
+
+export default isTypeOf;
