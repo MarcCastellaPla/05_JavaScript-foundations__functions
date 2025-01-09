@@ -19,3 +19,28 @@
  * random (generated in function): 40
  * output: "Sum with value 70 isd left in 30 from number 100"
  */
+import getDistanceFromThreshold from '../exercise_01/getDistanceFromThreshold.js';
+import generateRandomNumberInRange from "../exercise_03/generateRandomNumberInRange.js";
+
+
+/**
+ * Generates a message based on the sum of a given number and a random number between 0 and 100.
+ * If the sum exceeds 100, it returns a message indicating by how much it exceeds.
+ * Otherwise, it returns a message indicating how much is left to reach 100.
+ * @param {number} value - The number to be summed with a randomly generated number.
+ * @returns {string} The message indicating the distance from the threshold of 100.
+ */
+const getDistanceMessageFromSumTo100 = function (value, random = generateRandomNumberInRange(100)) {
+    const sumNumber = value + random;
+    const threshold = 100;
+    const distanceFromThreshold = getDistanceFromThreshold(sumNumber, threshold)
+    const absoluteDistance = Math.abs(distanceFromThreshold);
+
+    if (distanceFromThreshold < 0) {
+        return (`Sum with value ${sumNumber} exceeds in ${absoluteDistance} from number 100`)
+    }
+
+    return (`Sum with value ${sumNumber} is left in ${absoluteDistance} from number 100`);
+ };
+
+export default getDistanceMessageFromSumTo100;

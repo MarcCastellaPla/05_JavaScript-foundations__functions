@@ -17,3 +17,25 @@
  * input: []
  * output: ""
  */
+
+import checkCollectionHasElements from "../exercise_06/checkCollectionHasElements.js";
+
+
+/**
+ * Transforms an array into a string.
+ * - If the array has elements, it returns the elements joined by '|' (pipe character).
+ * - Otherwise, it returns an empty string.
+ * @param {Array} collection - The array (collection) to be transformed into a string.
+ * @returns {string} The resulting string or an empty string if the array is empty.
+ */
+const transformCollectionToString = function (collection) {
+   const hasElements = checkCollectionHasElements(collection)
+   
+   if (hasElements) {
+      return collection.join(' | ');
+   }
+
+   return "";
+};
+
+export default transformCollectionToString;
