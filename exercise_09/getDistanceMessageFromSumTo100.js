@@ -32,7 +32,8 @@ import generateRandomNumberInRange from "../exercise_03/generateRandomNumberInRa
  */
 const getDistanceMessageFromSumTo100 = function (value, random = generateRandomNumberInRange(100)) {
     const sumNumber = value + random;
-    const distanceFromThreshold = getDistanceFromThreshold(sumNumber, 100)
+    const threshold = 100;
+    const distanceFromThreshold = getDistanceFromThreshold(sumNumber, threshold)
     const absoluteDistance = Math.abs(distanceFromThreshold);
 
     if (distanceFromThreshold < 0) {

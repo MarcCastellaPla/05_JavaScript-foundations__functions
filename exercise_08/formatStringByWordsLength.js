@@ -27,8 +27,9 @@ import getTotalWordsFromString from '../exercise_02/getTotalWordsFromString.js';
  */
 const formatStringByWordsLength = function (sentence) {
    let totalWords = getTotalWordsFromString(sentence)
-   
-   if (totalWords > 5) {
+   const threshold = 5;
+
+   if (totalWords > threshold) {
      return sentence.toUpperCase();
    }
 
